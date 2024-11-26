@@ -7,6 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
+import java.util.UUID;
 
 
 @Data
@@ -16,6 +17,13 @@ import java.io.Serializable;
 public class AnswerValidationId implements Serializable {
 
     @Column(nullable = false, name = "answerId")
+    private UUID answerId;
+
+    @Column(nullable = false, name = "questionId")
+    private UUID questionId;
+
+    @Column(nullable = false, name = "QuizAssignment")
+    private String quizAssignmentId;
 
 
 }
